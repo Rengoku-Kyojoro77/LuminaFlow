@@ -1,5 +1,10 @@
+#INCLUDED 3 BONUS : HOW TO TELL AGE, TRY AND ACCEPT, DECLINING FUTURE DATES
+#1 NEW FUNCTION USED: 1. name: divmod
+#                     2. uses: returns both quotient and remainder. 
+
 import datetime as dt
 import time
+
 
 print('Welcome to your birthday countdown')
 
@@ -37,7 +42,7 @@ print('But I can tell you ... it was a ...', end = ' ')
 print(weekday_names[weekday_num])
 #AQUAIRIOUS/CAPRICON
 if month == 1:
-     print('You are a very luck person!!!')
+     print('You are a very lucky person!!!')
      print('This is your horroscope for today!')
      print('Your zodiac is .......  AQUAIRIOUS/CAPRICON!??')
      print()
@@ -58,7 +63,7 @@ if month == 1:
 
 #Piesces/Aquairious
 if month == 2:
-     print('You are a very luck person!!!')
+     print('You are a very lucky person!!!')
      print('This is your horroscope for today!')
      print('Your zodiac is .......  PISCES/AQUAIRIOUS!??')
      print()
@@ -80,7 +85,7 @@ if month == 2:
 
 #Trying out new and weeird bonus ideas!!!!
 if month == 3:
-    print('You are a very luck person!!!')
+    print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is .......  AIRIES/PISCES!??')
     print()
@@ -103,7 +108,7 @@ if month == 3:
     
 #TAURUS/AIRIES
 if month == 4:
-    print('You are a very luck person!!!')
+    print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is .......  TAURUS/AIRIES!??')
     print()
@@ -124,7 +129,7 @@ if month == 4:
     
 #GEMINI/TAURUS
 if month == 5 :
-    print('You are a very luck person!!!')
+    print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is .......  GEMINI/TAURUS!!??')
     print()
@@ -144,13 +149,13 @@ if month == 5 :
     'Weakness: Scattered focus.\n')
 
     
-   #CANCER/GEMINI
+  
 
 #CANCER/GEMINI
 if month == 6:
 
 
-    print('You are a very luck person!!!')
+    print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is .......  CANCER/LEO!!??')
     print()
@@ -174,7 +179,7 @@ if month == 6:
 
 #LEO/CANCER
 if month == 7:
-    print('You are a very luck person!!!')
+    print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is .......  CANCER/LEO!!??')
     print()
@@ -196,7 +201,7 @@ if month == 7:
 
 #VIRGO/LEO
 if month == 8:
-    print('You are a very luck person!!!')
+    print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is ....... Leo / Virgo !!??')
     print()
@@ -217,7 +222,7 @@ if month == 8:
 
 #VIRGO/LIBRA
 if month == 9:
-    print('You are a very luck person!!!')
+    print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is .......  VIRGO/LIBRA!!??')
     print()
@@ -238,7 +243,7 @@ if month == 9:
 
 #LIBRA/SCORPIO    
 if month == 10:
-    print('You are a very luck person!!!')
+    print('You are a very luckyperson!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is .......  LIBRA/SCORPIO!!??')
     print()
@@ -253,7 +258,7 @@ if month == 10:
 
 #Scorpio/Sagittarius
 if month == 11:
-    print('You are a very luck person!!!')
+    print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is .......  SCORPIO\SAGITTARIUS!!??')
     print()
@@ -274,7 +279,7 @@ if month == 11:
 
 
 if month == 12:
-    print('You are a very luck person!!!')
+    print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
     print('Your zodiac is .......  SCORPIO\SAGITTARIUS!!??')
     print()
@@ -296,6 +301,13 @@ if month == 12:
 current_time = dt.datetime.now()
 thisyear = current_time.year
 thisyear_bday = dt.datetime(thisyear, month, day)
+#Calculating users current age!!
+current_time = dt.datetime.now()
+Diff = current_time - date_birth
+view_diff = Diff.days//365
+print('Your age is currently:', view_diff)
+
+
 
 
 
@@ -307,6 +319,25 @@ if thisyear_bday > current_time:
     next_bday = thisyear_bday
 else:
     next_bday = dt.datetime(thisyear+1, month, day)
+    test_year = date_birth.year + 1
+    bday_list = [0, 0, 0, 0, 0 ,0 ,0]
+    while test_year < next_bday.year:
+        test_date = dt.datetime(test_year , month, day)
+        weekday_num = test_date.weekday()
+        bday_list[weekday_num] = bday_list[weekday_num] +1
+        test_year = test_year + 1
+    print()
+    for kk in range(7):
+        print('Your birthday was on a', weekday_names[kk], bday_list, 'times.')
+
+    print()    
+
+
+
+
+
+
+
     
 print('Your next birthday will be on ...', end = ' ')
 print(next_bday)
@@ -337,4 +368,4 @@ while next_bday > current_time:
 
     time.sleep(1)
  
-#THANK YOU!!!
+
