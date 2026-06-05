@@ -260,7 +260,7 @@ if month == 10:
 if month == 11:
     print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
-    print('Your zodiac is .......  SCORPIO\SAGITTARIUS!!??')
+    print('Your zodiac is .......  SCORPIO/SAGITTARIUS!!??')
     print()
     print()
     print('Scorpio is a powerhouse of intensity, passion, and psychological depth.\n' 
@@ -319,18 +319,21 @@ if thisyear_bday > current_time:
     next_bday = thisyear_bday
 else:
     next_bday = dt.datetime(thisyear+1, month, day)
-    test_year = date_birth.year + 1
-    bday_list = [0, 0, 0, 0, 0 ,0 ,0]
-    while test_year < next_bday.year:
-        test_date = dt.datetime(test_year , month, day)
-        weekday_num = test_date.weekday()
-        bday_list[weekday_num] = bday_list[weekday_num] +1
-        test_year = test_year + 1
-    print()
-    for kk in range(7):
-        print('Your birthday was on a', weekday_names[kk], bday_list, 'times.')
 
-    print()    
+
+#BONUS!!
+test_year = date_birth.year + 1
+bday_list = [0, 0, 0, 0, 0 ,0 ,0]
+while test_year < next_bday.year:
+    test_date = dt.datetime(test_year , month, day)
+    weekday_num = test_date.weekday()
+    bday_list[weekday_num] = bday_list[weekday_num] +1
+    test_year = test_year + 1
+    print()
+for kk in range(7):
+     print('Your birthday was on a', weekday_names[kk], bday_list[kk], 'times.')
+
+     print()    
 
 
 
@@ -351,7 +354,7 @@ print()
 
 
 print("Press Enter to start the countdown live ticker...")
-input()
+print()
 
 while next_bday > current_time:
     current_time = dt.datetime.now()
