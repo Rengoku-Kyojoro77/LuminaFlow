@@ -54,17 +54,37 @@ def swap_middle_rev_decode(x):
 
 
 
-x = 'Python is cool'    
+x = 'Python is cool'
+print(x)    
+
 x_even_odd = even_odd_swap(x)
+print(x_even_odd )
+
 x_rev      =  reverse(x)
+print(x_rev)
+
 x_rev_word = reverse_word_concise(x)
+print(x_rev_word )
+
 x_swap_middle = swap_middle(x)
+print(x_swap_middle )
+
 x_swap_middle_rev = swap_middle_rev(x)
+print(x_swap_middle_rev)
 #Now we will decode the encrypted messages
+
 x_even_odd_decode = even_odd_swap(x_even_odd)
+print(x_even_odd_decode)
+
 x_rev_decode = reverse(x_rev)
+print(x_rev_decode)
+
 x_swap_middle_decode = swap_middle(x_swap_middle)
+print(x_swap_middle_decode )
+
 x_decode = swap_middle_rev_decode(x_swap_middle_rev)
+print(x_decode)
+
 # BONUS COMES AFTER BASIC!!!
 
 
@@ -82,12 +102,18 @@ def general_swap(message, n, key):
         return s        
 
 x_enc_general = general_swap(x,n,E_key)
+print(x_enc_general)
 
 D_key = [0]*n
 
 for kk in range(n):
     D_key[kk]= E_key.index(kk)
-print(D_key)    
+
+
+
+x_decoded = general_swap(x_enc_general, n, D_key)
+print(x)
+   
 
 
 
