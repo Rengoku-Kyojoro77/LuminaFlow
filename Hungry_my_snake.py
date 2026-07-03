@@ -18,10 +18,6 @@ bnd.goto(-220, 220)
 bnd.end_fill()
 
 
-
-
-
-
 t = turtle.Turtle()
 t.shape('square')
 t.color("black")
@@ -75,8 +71,6 @@ def down():
 
 
 steps = 0
-
-
 
 
 
