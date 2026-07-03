@@ -260,7 +260,7 @@ if month == 10:
 if month == 11:
     print('You are a very lucky person!!!')
     print('This is your horroscope for today!')
-    print('Your zodiac is .......  SCORPIO/SAGITTARIUS!!??')
+    print('Your zodiac is .......  SCORPIO or SAGITTARIUS!!??')
     print()
     print()
     print('Scorpio is a powerhouse of intensity, passion, and psychological depth.\n' 
