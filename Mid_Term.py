@@ -240,8 +240,8 @@ class MemoryEngine:
             self.first_clicked_idx = None
             self.check_win()
         else:
-            self.lock_board = True
-            self.root.after(1000, lambda: self.hide_cards(first_idx, second_idx))
+           self.lock_board = True
+           self.root.after(1000, lambda: self.hide_cards(first_idx, second_idx))
 
     def hide_cards(self, idx1, idx2):
         self.buttons[idx1].config(text="?")
